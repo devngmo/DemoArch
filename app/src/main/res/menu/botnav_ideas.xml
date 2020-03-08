@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navlist_recent"
+        android:title="Recent" />
+
+    <item
+        android:id="@+id/navlist_favorite"
+        android:title="Favorite" />
+
+    <item
+        android:id="@+id/navlist_all"
+        android:title="All" />
+</menu>

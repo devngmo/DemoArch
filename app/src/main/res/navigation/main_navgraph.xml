@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navgraph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="tml.lab.demoarch.cca.features.dashboard.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_productListFragment"
+            app:destination="@id/productListFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_reportFragment"
+            app:destination="@id/reportFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="tml.lab.demoarch.cca.features.productlist.ProductListFragment"
+        android:label="fragment_product_list"
+        tools:layout="@layout/fragment_product_list" >
+        <action
+            android:id="@+id/action_productListFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+        <argument
+            android:name="listType"
+            app:argType="string"
+            android:defaultValue="all" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="tml.lab.demoarch.cca.features.productdetail.ProductDetailFragment"
+        android:label="fragment_product_detail"
+        tools:layout="@layout/fragment_product_detail" >
+        <argument
+            android:name="productId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="tml.lab.demoarch.cca.features.reports.ReportFragment"
+        android:label="fragment_report"
+        tools:layout="@layout/fragment_report" />
+</navigation>
